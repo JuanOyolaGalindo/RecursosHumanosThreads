@@ -19,11 +19,9 @@ public class FrameMenu extends JFrame{
 	public static final String ELIMINAR = "ELIMINAR";
 	public static final String MODIFICAR = "MODIFICAR";
 	
-	private FrameAgregar fa;
 	private FrameModificar fm;
 	
 	public FrameMenu(Controller pControl) {
-		fa = new FrameAgregar(pControl);
 		fm = new FrameModificar(pControl);
 		agregarBut = new JButton("Agregar candidato");
 		listarBut = new JButton("Listar candidatos");
@@ -68,27 +66,11 @@ public class FrameMenu extends JFrame{
 		add(modificarBut);
 	}
 	
-	public FrameAgregar getFa() {
-		return fa;
-	}
-
-	public void setFa(FrameAgregar fa) {
-		this.fa = fa;
-	}
-
-	public void abrirFrameAgregar(Controller pControl) {
-		fa.setVisible(true);
-		this.setVisible(false);
-	}
+	
+	
 	public void abrirFrameModificar(Controller pControl) {
 		fm.setVisible(true);
 		this.setVisible(false);
-	}
-	
-
-	public void abrirFrameMenu() {
-		fa.setVisible(false);
-		this.setVisible(true);
 	}
 	public void abrirFramePrincipal() {
 		fm.setVisible(false);
